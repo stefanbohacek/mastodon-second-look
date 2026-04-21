@@ -36,7 +36,7 @@ ready(async () => {
     {
       opacity: 1,
       x: "1rem",
-      y: "-1.5rem",
+      y: "-0.75rem",
       rotation: 8,
       duration: 0.4,
       stagger: 0.15,
