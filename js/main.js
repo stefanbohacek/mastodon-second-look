@@ -2,7 +2,8 @@ import ready from "../js/modules/ready.js";
 
 ready(async () => {
   const mainEl = document.getElementById("main");
-  const sections = [...mainEl.querySelectorAll(":scope > *")];
+  const sectionsRoot = mainEl.querySelector(":scope > div") ?? mainEl;
+  const sections = [...sectionsRoot.querySelectorAll(":scope > *")];
 
   sections.forEach((section) => {
     const targets = section.classList.contains("row")
