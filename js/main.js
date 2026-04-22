@@ -20,6 +20,8 @@ ready(async () => {
   const tl = gsap.timeline();
   sections.forEach((section) => {
     if (section.classList.contains("row")) {
+      const isCardsRow = section.children.length > 2;
+      if (isCardsRow) tl.addLabel("cards");
       tl.to([...section.children], {
         opacity: 1,
         y: 0,
@@ -43,6 +45,6 @@ ready(async () => {
       stagger: 0.1,
       ease: "back.out(1.7)",
     },
-    "-=1.0",
+    "cards+=0.01",
   );
 });
