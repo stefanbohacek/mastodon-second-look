@@ -24,9 +24,9 @@ ready(async () => {
         opacity: 1,
         y: 0,
         duration: 0.5,
-        stagger: 0.1,
+        stagger: 0.02,
         ease: "power2.out",
-      });
+      }, "-=0.3");
     } else {
       tl.to(section, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" });
     }
@@ -40,7 +40,7 @@ ready(async () => {
       y: "-0.75rem",
       rotation: 8,
       duration: 0.4,
-      stagger: 0.15,
+      stagger: 0.1,
       ease: "back.out(1.7)",
     },
     "-=1.0",
